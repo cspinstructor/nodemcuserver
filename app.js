@@ -28,6 +28,7 @@ server.get('/data', (req, res) => {
 
 // client GET localhost/data/:value
 // eg:  GET localhost/data/335
+// https://stackoverflow.com/questions/15128849/using-multiple-parameters-in-url-in-express
 server.get('/data/:value/:value2', (req, res) => {
   res.status(200).json({
     params_value: req.params.value,
