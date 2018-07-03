@@ -10,6 +10,7 @@ server.get('/', (req, res) => {
 
 // client POST localhost/data  x-www-form-urlencoded
 // value=223
+// see corresponding NodeMCU code: nodemcu_connect_server.ino
 server.post('/data', (req, res) => {
   console.log(req.body.value);
   res.status(200).json({
