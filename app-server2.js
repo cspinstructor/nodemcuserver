@@ -13,6 +13,7 @@ server.get('/', (req, res) => {
   res.status(200).send(`received  ${responsestr}`);
 });
 
+// request this to get all data from array
 server.get('/values', (req, res) => {
   var i = 0;
   var responsestr = '';
