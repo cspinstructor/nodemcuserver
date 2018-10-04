@@ -2,13 +2,19 @@
   "name": "nodemcuserver",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "app-server.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "client-install": "npm install --prefix client",
+    "start": "node server.js",
+    "server": "nodemon server.js",
+    "client": "npm start --prefix client",
+    "dev": "concurrently \"npm run server\" \"npm run client\""
   },
   "author": "Paul",
   "license": "ISC",
   "dependencies": {
+    "concurrently": "^4.0.1",
     "express": "^4.16.3"
   }
 }
